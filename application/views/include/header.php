@@ -11,6 +11,7 @@
 
    <link href="<?php echo base_url('assets/css/metro/css/modern.css') ?>" rel="stylesheet">
    <link href="<?php echo base_url('assets/css/metro/css/modern-responsive.css') ?>" rel="stylesheet">
+   <link href="<?php echo base_url('assets/css/metro/css/custom.css') ?>" rel="stylesheet">
 
 </head>
 <body>

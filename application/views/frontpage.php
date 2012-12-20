@@ -1,7 +1,25 @@
-<div class="container">
-   <div class="hero-unit">
-      <h2>CodeIgniter Bootstrap</h2>
-      <p>CodeIgniter Bootstrap kick starts the development process of the web development process by including Twitter Bootstrap into CodeIgniter. It also includes certain libraries such as AWS and Facebook in-case you are developing applications requiring those SDKs. So stop writing the same code over again and start working on your idea.</p>
-      <a class="btn btn-primary btn-large" href="https://github.com/sjlu/CodeIgniter-Bootstrap">View on Github</a>
-   </div>
+<div class="page">
+		<div class="grid homepage">
+		<div class="row">
+		<div class="span6">
+			<h1 class="classvibe_title_large fg-color-white">ClassVibe<small>BookStores</small><h1>
+		</div>
+		<div class="span6">
+			<form action="google.com" method="post">
+				<div class="input-control text">
+					<input type="text" placeholder="Email" tabindex="1">
+					<button class="helper"></button>
+				</div>
+
+				<div class="input-control password">
+					<input type="password" tabindex="2">
+					<button class="helper"></button>
+				</div>
+				<span style="float:right">
+					<input class="bg-color-white fg-color-blueDark" type="submit" value="Submit" tabindex="3">
+				</span>
+			</form>
+		</div>
+		</div>
+		</div>
 </div>

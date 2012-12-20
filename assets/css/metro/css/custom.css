@@ -1,0 +1,22 @@
+body{
+/*background-color:#2D89EF;*/
+background-color:#2B5797;
+}
+
+.page{
+	width:940px;
+	margin:auto;
+}
+.classvibe_title_large{
+	font-size:72px;
+	display:block;
+}
+.classvibe_title_large small{
+	font-size:24px;
+}
+
+.homepage{
+	position:relative;
+	top:200px;
+}
+
