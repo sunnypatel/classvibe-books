@@ -1,6 +1,6 @@
 body{
 /*background-color:#2D89EF;*/
-background-color:#2B5797;
+/*background-color:#2B5797;*/
 }
 
 .page{
@@ -8,15 +8,28 @@ background-color:#2B5797;
 	margin:auto;
 }
 .classvibe_title_large{
-	font-size:72px;
+	font-size:48px;
 	display:block;
+	
 }
 .classvibe_title_large small{
-	font-size:24px;
+	font-size:16px;
 }
 
 .homepage{
 	position:relative;
-	top:200px;
+	top:20px;
+}
+.slideshow{
+	background:lightgrey;
+	height:250px;
+}
+.signup{
+	background:#3C78D8;
+	padding:20px;
 }
 
+.login{
+	background:#41CB2C;
+	padding:20px;
+}
