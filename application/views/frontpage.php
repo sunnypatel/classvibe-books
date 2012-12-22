@@ -7,7 +7,7 @@
 			<div class="span6">
 				<form action="google.com" method="post">
 					<div class="input-control text">
-						<input type="text" tabindex="1">
+						<input type="text" placeholder="Search by course, title, author, ISBN, or keywords" tabindex="1">
 						<button class="btn-search"></button>
 					</div>
 				</form>
@@ -25,15 +25,15 @@
 			<h2 class="fg-color-white">signup</h2>
 			<form action="#" method="post">
 				<div class="input-control text">
-					<input type="text" tabindex="2">
+					<input type="text" placeholder="Email" tabindex="2">
 					<button class="helper" onclick="return false"></button>
 				</div>
 
 				<div class="input-control password">
-					<input type="password">
+					<input type="password" placeholder="Password" tabindex="3">
 					<button class="helper"></button>
 				</div>
-				<input type="submit" class="button bg-color-white fg-color-blue" value="signup">
+				<input type="submit" class="button bg-color-white fg-color-blue" value="signup" tabindex="4">
 
 			</form>
 			</div>
@@ -42,15 +42,15 @@
 				<h2 class="fg-color-white">login</h2>
 	            <form action="#" method="post">
                 <div class="input-control text">
-                    <input type="text" tabindex="2">
+                    <input type="text" tabindex="5" placeholder="Email">
                     <button class="helper" onclick="return false"></button>
                 </div>
 
                 <div class="input-control password">
-                    <input type="password">
+                    <input type="password" placeholder="Password" tabindex="6">
                     <button class="helper"></button>
                 </div>
-					<input type="submit" class="button bg-color-white fg-color-green" value="login">
+					<input type="submit" class="button bg-color-white fg-color-green" value="login" tabindex="7">
     	        </form>
 
 			</div>
