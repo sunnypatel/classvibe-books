@@ -23,14 +23,14 @@
 			<div class="row">
 			<div class="span6 signup">
 			<h2 class="fg-color-white">signup</h2>
-			<form action="#" method="post">
+			<form action="<?php echo base_url('/index.php/auth/create_user/') ?>" method="post">
 				<div class="input-control text">
-					<input type="text" placeholder="Email" tabindex="2">
+					<input type="text" placeholder="Email" tabindex="2" name="email">
 					<button class="helper" onclick="return false"></button>
 				</div>
 
 				<div class="input-control password">
-					<input type="password" placeholder="Password" tabindex="3">
+					<input type="password" placeholder="Password" tabindex="3" name="password">
 					<button class="helper"></button>
 				</div>
 				<input type="submit" class="button bg-color-white fg-color-blue" value="signup" tabindex="4">
