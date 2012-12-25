@@ -2,7 +2,7 @@
 class Tests extends Main_Controller {
 
 	public function index()
-	{
+	{ 
 		echo 'test';	
 	}
 	public function sel_single_ind(){
