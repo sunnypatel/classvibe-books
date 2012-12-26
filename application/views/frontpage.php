@@ -1,12 +1,12 @@
 <div class="container-fluid">
 	<div class="row-fluid top">
-		<div class="span6 classvibe_title">
+		<div class="span4 classvibe_title">
 			<h2 class="small">ClassVibe<small>BookStores</small></h2>
 		</div>
-		<div class="span6 right">
+		<div class="span8 right" >
 			<form class="" action="google.com" method="post">
 				<div class="input-append">
-				<input class="span10" type="text" placeholder="Search by course, title, auther, ISBN, or keywords" tabindex="1">
+				<input class="" style="width:86%" type="text" placeholder="Search by course, title, auther, ISBN, or keywords">
 				<button type="submit" class="btn">Search</button>
 				</div>
 			</form>
@@ -33,23 +33,23 @@
 		<!-- login box -->
 		<div class="span4 login_box">
 			
-			<form class="homepage" action="#" method="post">
+			<form class="homepage" action="<?php echo base_url('index.php/auth/login');?>" method="post">
 				<h1>login</h1>	<br>
 				<div class="control-group">
 					<div class="controls">
-						<input type="text" class="span12" placeholder="Email">
+						<input type="text" class="span12" placeholder="Email" name="identity" tabindex="1">
 					</div>
 				</div>
 
 				<div class="control-group">
 					<div class="controls">
-						<input type="password" class="span12" placeholder="Password">
+						<input type="password" class="span12" placeholder="Password" name="password" tabindex="2">
 					</div>
 				</div>
 <br>
 				<div class="control-group">
 					<div class="controls">
-						<button type="submit" class="btn right">Sign in</button>
+						<button type="submit" class="btn right" tabindex="3">Sign in</button>
 					</div>
 				</div>
 <br>
