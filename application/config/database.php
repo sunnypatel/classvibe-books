@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'sunny';
-$db['default']['password'] = 'classvibe';
-$db['default']['database'] = 'test';
+$db['default']['username'] = 'root';
+$db['default']['password'] = 'rawr7';
+$db['default']['database'] = 'classvibe_books';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class="row-fluid top">
 		<div class="span4 classvibe_title">
-			<h2 class="small">ClassVibe<small>BookStores</small></h2>
+			<h2 class="small">AssVibe<small>BookStores</small></h2>
 		</div>
 		<div class="span8 right" >
 			<form class="search_all_top" action="google.com" method="post">
