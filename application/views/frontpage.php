@@ -4,9 +4,9 @@
 			<h2 class="small">ClassVibe<small>BookStores</small></h2>
 		</div>
 		<div class="span8 right" >
-			<form class="" action="google.com" method="post">
+			<form class="search_all_top" action="google.com" method="post">
 				<div class="input-append">
-				<input class="" style="width:86%" type="text" placeholder="Search by course, title, auther, ISBN, or keywords">
+				<input class="" style="width:86%;" type="text" placeholder="Search by course, title, auther, ISBN, or keywords">
 				<button type="submit" class="btn">Search</button>
 				</div>
 			</form>

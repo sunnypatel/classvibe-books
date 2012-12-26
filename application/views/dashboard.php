@@ -1,45 +1,58 @@
-<div class="page">
-	<div class="grid dashboard">
-		<div class="row">
-			<div class="span6">
-			<span class="classvibe_title_large fg-color-black">
-			ClassVibe<small>BookStores</small>
-			</span>
+<div class="container-fluid">
+	<div class="row-fluid top">
+			<div class="span4 classvibe_title">
+				<h2 class="small">ClassVibe<small>BookStores</small></h2>
 			</div>
 
-			<div class="span6" style="text-align:right;">
-			<a class="button bg-color-lighten fg-color-blue" href="#">Account management</a>
-			<a class="button bg-color-blue fg-color-white" href="<?php echo base_url('index.php/auth/logout/');?>">Logout</a>
+			<div class="span8 right">
+			<a class="btn" href="#">Account management</a>
+			<a class="btn" href="<?php echo base_url('index.php/auth/logout/');?>">Logout</a>
 			</div>
-		</div> <!-- row -->
-		<br><br>
-		<div class="row">
-		
-			<div class="span4 upload_new">
-			<h2 class="med">upload new</h2>
-			<br>	
+	</div> <!-- row -->
+	
+	<div class="row-fluid">&nbsp;</div>
+	
+	<div class="row-fluid">
+		<div class="span4 upload_new_box">
 			<form action="#" method="post">
-				
-				<div class="input-control file">
-					<input type="file" name="image" placeholder="Book cover" value="Book cover">	    			</div>
-
-				<div class="input-control text">
-					<input type="text" placeholder="Title" tabindex="1" name="title">
-					<button class="helper" onclick="return false"></button>
+			<h1>upload new</h1>
+			
+			<div class="control-group">
+				<div class="controls">
+					<input type="file" name="image" placeholder="Book cover" value="Book cover">
 				</div>
-
-				<div class="input-control text">
-					<input type="text" placeholder="Author" tabindex="2" name="author">
-					<button class="helper" onclick="return false"></button>
-				</div>
-				
-				<div class="input-control text">
-					<input type="text" placeholder="Course #" tabindex="3" name="course_num">
-					<button class="helper" onclick="return false"></button>
-				</div>
-			</form>
 			</div>
 
+			<div class="control-group">
+				<div class="controls">
+					<input type="text" class="span12" placeholder="Title" tabindex="1" name="title">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<div class="controls">
+					<input type="text" class="span12" placeholder="Author" tabindex="2" name="author">
+				</div>
+			</div>
+				
+			<div class="control-group">
+				<div class="controls">
+					<input type="text" class="span12" placeholder="Course #" tabindex="3" name="course_num">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<div class="controls">
+					<input type="submit" class="span6">
+				</div>
+			</div>
+			</form>
+			
+
+		</div>
+		<!-- Analytics -->
+		<div class="span8 analytics_box">
+		<h1>analytics</h1>
 		</div>
 
 	</div>
