@@ -68,15 +68,16 @@ class Auth extends CI_Controller {
 			if ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), $remember))
 			{
 				//if the login is successful
-				//redirect them back to the home page
+				//redirect them back to the dashboard
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
-				redirect('/', 'refresh');
+				redirect('dashboard/', 'refresh');
 			}
 			else
 			{
 				//if the login was un-successful
 				//redirect them back to the login page
 				$this->session->set_flashdata('message', $this->ion_auth->errors());
+	
 				redirect('auth/login', 'refresh'); //use redirects instead of loading views for compatibility with MY_Controller libraries
 			}
 		}
@@ -390,11 +391,6 @@ class Auth extends CI_Controller {
 	function create_user()
 	{
 		$this->data['title'] = "Create User";
-
-		/*if (!$this->ion_auth->logged_in() || !$this->ion_auth->is_admin())
-		{
-			redirect('auth', 'refresh');
-		}*/
 
 		//validate form input
 		$this->form_validation->set_rules('email', 'Email Address', 'required|valid_email');

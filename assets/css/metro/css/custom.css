@@ -2,7 +2,10 @@ body{
 /*background-color:#2D89EF;*/
 /*background-color:#2B5797;*/
 }
-
+h2.med{
+	color:white;
+	font-size:28px;
+}
 .page{
 	width:940px;
 	margin:auto;
@@ -16,7 +19,7 @@ body{
 	font-size:16px;
 }
 
-.homepage{
+.homepage, .dashboard{
 	position:relative;
 	top:20px;
 }
@@ -32,4 +35,18 @@ body{
 .login{
 	background:#41CB2C;
 	padding:20px;
+}
+
+.upload_new{
+	background:#57A7B5;
+	padding:5px;
+}
+.upload_new form input{
+	background:#4a8f9c;
+}
+.upload_new h2{
+	text-align:right;
+}
+.analytics{
+	background:#ffaa00;
 }

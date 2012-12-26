@@ -40,14 +40,14 @@
 
 			<div class="span6 login">
 				<h2 class="fg-color-white">login</h2>
-	            <form action="#" method="post">
+	            <form action="<?php echo  base_url('index.php/auth/login')?>" method="post">
                 <div class="input-control text">
-                    <input type="text" tabindex="5" placeholder="Email">
+                    <input type="text" tabindex="5" placeholder="Email" name="identity">
                     <button class="helper" onclick="return false"></button>
                 </div>
 
                 <div class="input-control password">
-                    <input type="password" placeholder="Password" tabindex="6">
+                    <input type="password" placeholder="Password" tabindex="6" name="password">
                     <button class="helper"></button>
                 </div>
 					<input type="submit" class="button bg-color-white fg-color-green" value="login" tabindex="7">
