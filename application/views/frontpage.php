@@ -1,61 +1,59 @@
-<div class="page">
-		<div class="grid homepage">
-			<div class="row">
-			<div class="span6">
-				<span class="classvibe_title_large fg-color-black">ClassVibe<small>BookStores</small></span>
-			</div>
-			<div class="span6">
-				<form action="google.com" method="post">
-					<div class="input-control text">
-						<input type="text" placeholder="Search by course, title, author, ISBN, or keywords" tabindex="1">
-						<button class="btn-search"></button>
-					</div>
-				</form>
-			</div>
-			</div>
-
-			<div class="row">
-			<div class="span12 slideshow">
-			The Slideshow
-			</div>
-			</div>
-
-			<div class="row">
-			<div class="span6 signup">
-			<h2 class="fg-color-white">signup</h2>
-			<form action="<?php echo base_url('/index.php/auth/create_user/') ?>" method="post">
-				<div class="input-control text">
-					<input type="text" placeholder="Email" tabindex="2" name="email">
-					<button class="helper" onclick="return false"></button>
+<div class="container-fluid">
+	<div class="row-fluid top">
+		<div class="span6 classvibe_title">
+			<h2 class="small">ClassVibe<small>BookStores</small></h2>
+		</div>
+		<div class="span6 right">
+			<form class="" action="google.com" method="post">
+				<div class="input-append">
+				<input class="span10" type="text" placeholder="Search by course, title, auther, ISBN, or keywords" tabindex="1">
+				<button type="submit" class="btn">Search</button>
 				</div>
-
-				<div class="input-control password">
-					<input type="password" placeholder="Password" tabindex="3" name="password">
-					<button class="helper"></button>
-				</div>
-				<input type="submit" class="button bg-color-white fg-color-blue" value="signup" tabindex="4">
-
 			</form>
+		</div>
+	</div>
+	<div class="row-fluid">&nbsp;</div>
+	<div class="row-fluid">
+
+		<div class="span8">
+		
+			<div id="myCarousel" class="carousel slide homepage_carousel">
+			<!-- Carousel items -->
+			<div class="carousel-inner">
+				<div class="active item"><img src="<?php echo base_url('assets/img/homepage/slide-01.jpg');?>"></div>
+				<div class="item"><img src="<?php echo base_url('assets/img/homepage/slide-02.jpg');?>"></div>
+				<div class="item"><img src="<?php echo base_url('assets/img/homepage/slide-03.jpg');?>"></div>
 			</div>
-
-			<div class="span6 login">
-				<h2 class="fg-color-white">login</h2>
-	            <form action="<?php echo  base_url('index.php/auth/login')?>" method="post">
-                <div class="input-control text">
-                    <input type="text" tabindex="5" placeholder="Email" name="identity">
-                    <button class="helper" onclick="return false"></button>
-                </div>
-
-                <div class="input-control password">
-                    <input type="password" placeholder="Password" tabindex="6" name="password">
-                    <button class="helper"></button>
-                </div>
-					<input type="submit" class="button bg-color-white fg-color-green" value="login" tabindex="7">
-    	        </form>
-
-			</div>
+			<!-- Carousel nav -->
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev"><img src="<?php echo base_url('assets/img/prev.png')?>"></a>	
+			<a class="right carousel-control" href="#myCarousel" data-slide="next"><img src="<?php echo base_url('assets/img/next.png')?>"></a>
 			</div>
 		</div>
 
+		<!-- login box -->
+		<div class="span4 login_box">
+			
+			<form class="homepage" action="#" method="post">
+				<h1>login</h1>	<br>
+				<div class="control-group">
+					<div class="controls">
+						<input type="text" class="span12" placeholder="Email">
+					</div>
+				</div>
 
+				<div class="control-group">
+					<div class="controls">
+						<input type="password" class="span12" placeholder="Password">
+					</div>
+				</div>
+<br>
+				<div class="control-group">
+					<div class="controls">
+						<button type="submit" class="btn right">Sign in</button>
+					</div>
+				</div>
+<br>
+			</form>	
+		</div>
+	</div>
 </div>

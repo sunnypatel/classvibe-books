@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="">
-   <meta name="keywords" content="">
-   <meta name="author" content="">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
 
-   <title>ClassVibe | Bookstores</title>
+	<title>ClassVibe | Bookstores</title>
 
-   <link href="<?php echo base_url('assets/css/metro/css/modern.css') ?>" rel="stylesheet">
-   <link href="<?php echo base_url('assets/css/metro/css/modern-responsive.css') ?>" rel="stylesheet">
-   <link href="<?php echo base_url('assets/css/metro/css/custom.css') ?>" rel="stylesheet">
-
+	<link href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('assets/css/bootstrap-responsive.min.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('assets/css/custom.less') ?>" rel="stylesheet/less" type="type/css">
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,700' rel='stylesheet' type='text/css'>
+	<!-- *** DEVELOPMENT ONLY *** -->
+	<!-- ON PRODUCTION USE PRE-COMPILED VER. -->
+	<script src="<?php echo base_url('assets/js/less.js'); ?>" type="text/javascript"></script>
 </head>
 <body>
