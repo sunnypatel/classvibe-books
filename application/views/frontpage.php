@@ -56,4 +56,41 @@
 			</form>	
 		</div>
 	</div>
+
+	<div class="row-fluid box">
+		<div class="span12">
+	
+			<div class="row-fluid green">
+				<div class="span5" style="padding:15px">
+                    <form class="signup_form" method="post" action="#">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" class="span12" placeholder="Email" name="email">
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="password" class="span12" placeholder="Password" name="password">
+                            </div>
+                        </div>  
+                        
+                        <div class="control-group">
+                            <div class="controls">
+                                <button type="submit" class="span4 btn btn-primary">Sign up</button>
+                            </div>  
+                        </div>
+                    </form>
+
+				</div>
+		
+				<div class="span7" style="padding:15px;">	
+					<h1>sign up here</h1>
+					<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras consequat laoreet sodales. Duis vel tortor ante, a vehicula nunc. Mauris eleifend felis ac tellus semper quis interdum nisl facilisis.</p>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
 </div>
