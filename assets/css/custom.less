@@ -2,6 +2,9 @@
 body{
 	padding-top:30px;
 }
+h1,h2,h3,h4,h5,h6{
+	margin:0px;
+}
 
 .right{
 	text-align:right;
@@ -63,24 +66,27 @@ body{
 .box{
 	
 	.green{
-	//	background:#14D100;
+		background:#14D100;
+	}
+	.gray{
 		background:#F0F0F0;
-	//	padding:15px;
 	}
 
 	h1{
 		color:#222;
 		font-weight:lighter;
 		font-size:54px;
+		margin-bottom:30px;	
 	}
 	p{
 		color:#222;
 		line-height:30px;
-		font-size:16px;
-		
+		font-size:20px;
+		word-spacing:2px;	
 	}
 		
-	input{ height:40px; }
+	button,input{ height:40px; font-size:18px;}
+//	button.btn{border:1px solid blue;}	
 }
 .upload_new_box{
 	background:#57A7B5;
@@ -90,12 +96,17 @@ body{
 		color:#fff;
 		font-weight:lighter;
 		float:right;
+		margin-bottom:20px;
+		display:block;
 	}
 
 	input{
-		height:20px;
-		font-size:12px;	
+		height:30px;
+		font-size:14px;	
+		//background:#1c6876;
+		
 	}
+	button{ height:30px; }
 }
 .analytics_box{
 	background:#ffaa00;

@@ -77,7 +77,7 @@ class Auth extends CI_Controller {
 				//if the login was un-successful
 				//redirect them back to the login page
 				$this->session->set_flashdata('message', $this->ion_auth->errors());
-	
+				echo $this->ion_auth->errors();	
 				redirect('auth/login', 'refresh'); //use redirects instead of loading views for compatibility with MY_Controller libraries
 			}
 		}
@@ -407,15 +407,16 @@ class Auth extends CI_Controller {
 				'first_name' => $this->input->post('first_name'),
 				'last_name'  => $this->input->post('last_name'),
 			);
-			echo 'form validation passed';
+
 		}
 		if ($this->form_validation->run() == true && $this->ion_auth->register($username, $password, $email, $additional_data))
 		{
 			//check to see if we are creating the user
 			//redirect them back to the admin page
 			$this->session->set_flashdata('message', $this->ion_auth->messages());
-			//redirect("auth", 'refresh');
-			echo "worked";
+			$this->ion_auth->login($username,$password);
+			redirect("/dashboard", 'refresh');
+		
 		}
 		else
 		{

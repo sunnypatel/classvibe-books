@@ -60,9 +60,9 @@
 	<div class="row-fluid box">
 		<div class="span12">
 	
-			<div class="row-fluid green">
+			<div class="row-fluid gray">
 				<div class="span5" style="padding:15px">
-                    <form class="signup_form" method="post" action="#">
+                    <form class="signup_form" method="post" action="<?php echo base_url('index.php/auth/create_user')?>">
                         <div class="control-group">
                             <div class="controls">
                                 <input type="text" class="span12" placeholder="Email" name="email">
@@ -85,8 +85,8 @@
 				</div>
 		
 				<div class="span7" style="padding:15px;">	
-					<h1>sign up here</h1>
-					<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras consequat laoreet sodales. Duis vel tortor ante, a vehicula nunc. Mauris eleifend felis ac tellus semper quis interdum nisl facilisis.</p>
+					<h1>sign up</h1>
+					<p>Create a free account and join the hundreds of college students sharing books today.</p>
 				</div>
 
 			</div>
