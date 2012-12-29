@@ -15,9 +15,8 @@
 	<div class="row-fluid">&nbsp;</div>
 	<div class="row-fluid">
 
-		<div class="span8">
 		
-			<div id="myCarousel" class="carousel slide homepage_carousel">
+			<div id="myCarousel" class="span8 carousel slide homepage_carousel">
 			<!-- Carousel items -->
 			<div class="carousel-inner">
 				<div class="active item"><img src="<?php echo base_url('assets/img/homepage/slide-01.jpg');?>"></div>
@@ -28,13 +27,12 @@
 			<a class="left carousel-control" href="#myCarousel" data-slide="prev"><img src="<?php echo base_url('assets/img/prev.png')?>"></a>	
 			<a class="right carousel-control" href="#myCarousel" data-slide="next"><img src="<?php echo base_url('assets/img/next.png')?>"></a>
 			</div>
-		</div>
 
 		<!-- login box -->
 		<div class="span4 login_box">
 			
 			<form class="homepage" action="<?php echo base_url('index.php/auth/login');?>" method="post">
-				<h1>login</h1>	<br>
+				<h1>login</h1>
 				<div class="control-group">
 					<div class="controls">
 						<input type="text" class="span12" placeholder="Email" name="identity" tabindex="1">
@@ -46,22 +44,25 @@
 						<input type="password" class="span12" placeholder="Password" name="password" tabindex="2">
 					</div>
 				</div>
-<br>
 				<div class="control-group">
 					<div class="controls">
-						<button type="submit" class="btn right" tabindex="3">Sign in</button>
+						<button type="submit" class="span6 btn pull-right" tabindex="3">Sign in</button>
 					</div>
 				</div>
-<br>
 			</form>	
 		</div>
 	</div>
-
+<div class="row-fluid">&nbsp;</div>
 	<div class="row-fluid box">
 		<div class="span12">
 	
 			<div class="row-fluid gray">
-				<div class="span5" style="padding:15px">
+				<div class="span7" style="padding:40px;">	
+					<h1>sign up</h1>
+					<p>Create a free account and join the hundreds of college students sharing books today.</p>
+				</div>
+		
+				<div class="span5" style="padding:40px">
                     <form class="signup_form" method="post" action="<?php echo base_url('index.php/auth/create_user')?>">
                         <div class="control-group">
                             <div class="controls">
@@ -77,17 +78,14 @@
                         
                         <div class="control-group">
                             <div class="controls">
-                                <button type="submit" class="span4 btn btn-primary">Sign up</button>
+                                <button type="submit" style="float:right" class="span5 btn btn-primary">Sign up</button>
                             </div>  
                         </div>
                     </form>
 
 				</div>
 		
-				<div class="span7" style="padding:15px;">	
-					<h1>sign up</h1>
-					<p>Create a free account and join the hundreds of college students sharing books today.</p>
-				</div>
+
 
 			</div>
 
