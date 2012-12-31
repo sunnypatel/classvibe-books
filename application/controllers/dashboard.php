@@ -93,41 +93,65 @@ class Dashboard extends Main_Controller {
 
 	}
 
+
 	// check if bookcover image uploaded is jpg if not then converts to jpg
 	// scales the image down to 1024x720
 	// creates a thumbnail
 	private function check_bookcover($data){
+		// load CI image manpulation library
+		$this->load->library('image_lib');
+		// set the image processing library to ImageMagick, this library 
+		// allows converting images to .jpg
+//		$config['image_library'] = 'ImageMagick';	
+		
+		// if image isnt jpg convert it
+		if($data['file_ext'] != ".jpg"){
+
+			$config['source_image'] = $data['full_path'];
+			$config['new_image'] = $data['file_path'] . $data['raw_name'] . '.jpg';
+			// convert image to jpg
+			$data['full_path'] =	$this->image_lib->image_to_jpeg($config['source_image'],$config['new_image'],$data['file_ext'], 50);
+			
+		}	
+	
+		// reset vars and prepare for more image processing
+		$config = array();
+		$this->image_lib->clear();
+
+        // resize if needed
+        if($data['image_width'] > 320 || $data['image_height'] > 280) {
+            // bookcover prefs
+            $config['source_image'] = $data['full_path'];
+			$config['new_image'] =$data['file_path'] . $data['raw_name'] . '_320x280.jpg';
+            $config['maintain_ratio'] = TRUE;
+            $config['width'] = 320;
+            $config['height'] = 280;
+            $config['create_thumb'] = FALSE;
+            // re-initialize image library config
+            $this->image_lib->initialize($config);
+            // process
+            $this->image_lib->resize();
+            //  $this->image_lib->display_errors();
+        }
+
+
+        // reset vars and prepare for another image process
+        $config = array();
+        $this->image_lib->clear();
+
 
 		// Creates the thumbnail
 		// set the prefs
 		$config['source_image'] = $data['full_path'];
+		
 		$config['create_thumb'] = TRUE;
 		$config['maintain_ratio'] = TRUE;
 		$config['width'] = 75;
 		$config['height'] = 50;
-		// load image manpul. library w/ prefs
-		$this->load->library('image_lib',$config);	
+		// re-initialize image library w/ new configs
+		$this->image_lib->initialize($config);	
 		// process
 		$this->image_lib->resize();
 
-		// reset vars and prepare for another image process
-		$config = array();
-		$this->image_lib->clear();
-
-		// resize if needed
-		if($data['image_width'] > 320 || $data['image_height'] > 280) {
-			// bookcover prefs
-			$config['source_image'] = $data['full_path'];
-			$config['maintain_ratio'] = TRUE;
-			$config['width'] = 320;
-			$config['height'] = 280;
-			$config['create_thumb'] = FALSE;
-			$config['new_image'] = '';
-			// re-initialize image library config
-			$this->image_lib->initialize($config);
-			// process
-			$this->image_lib->resize();
-			//	$this->image_lib->display_errors();
-		}	
 	} 
 }

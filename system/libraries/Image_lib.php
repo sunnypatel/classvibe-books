@@ -1438,6 +1438,40 @@ class CI_Image_lib {
 
 	// --------------------------------------------------------------------
 
+	/** 
+	 * AUTHOR : SUNNY PATEL
+	 * Image convert function
+	 * converts gif images or png images to jpg
+	 * @source
+	 * @target
+	 * @ext source image type
+	 * @return path to converted image
+	*/
+	function image_to_jpeg($source, $target, $ext,$quality=90){
+
+    	if ($ext == '.png'){
+
+			$image = imagecreatefrompng($source);
+			$bg = imagecreatetruecolor(imagesx($image), imagesy($image));
+			imagefill($bg, 0, 0, imagecolorallocate($bg, 255, 255, 255));
+			imagealphablending($bg, TRUE);
+			imagecopy($bg, $image, 0, 0, 0, 0, imagesx($image), imagesy($image));
+			imagedestroy($image);
+			imagejpeg($bg, $target, 50);// the 50 is to set the quality, 0 = worst-smaller file, 100 = better-bigger file 
+			ImageDestroy($bg);
+	
+    	} elseif ($ext == '.gif'){
+   			$image = imagecreatefromgif($source);
+    	    imagejpeg($image,$target,$quality);
+    	    imagedestroy($image);
+    	}
+    	return $target;
+	}
+
+
+
+	// --------------------------------------------------------------------
+
 	/**
 	 * Is GD Installed?
 	 *
