@@ -73,21 +73,21 @@ class Dashboard extends Main_Controller {
                 'name' => 'author',
                 'id' => 'author',
                 'type' => 'text',
-                'value' => $this->form_validation->set_values('author')
+                'value' => $this->form_validation->set_value('author')
             );
 
             $this->data['course_num'] = array(
                 'name' => 'course_num',
                 'id' => 'course_num',
                 'type' => 'text',
-                'value' => $this->form_validation->set_values('course_num')
+                'value' => $this->form_validation->set_value('course_num')
             );
 
             $this->data['isbn'] = array(
                 'name' => 'isbn',
                 'id' => 'isbn',
                 'type' => 'text',
-                'value' => $this->form_validation->set_values('isbn')
+                'value' => $this->form_validation->set_value('isbn')
             );
 		}
 

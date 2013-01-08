@@ -67,15 +67,18 @@
 			<li class="">
 			<a href="#" class="thumbnail">
 				
-				<img data-src="http://placehold.it/320x240" style="width:320px; height:240px;" src="http://placehold.it/320x240">
+				<img data-src="http://placehold.it/320x270" style="width:320px; height:270px;" src="http://placehold.it/320x270">
 			</a>
 			</li>
 			
             <li class="">
-            <a href="#" class="thumbnail">
-                <img data-src="http://placehold.it/160x120" style="width:160px; 
-height:120px;" src="http://placehold.it/160x120">
-            </a>
+			<div class="thumbnail" id="nail">
+                <img data-src="http://placehold.it/160x120" src="http://placehold.it/160x120">
+				<div class="snipit">
+					<h3>Label</h3>
+					<p>caption</p>
+				</div>
+			</div>
             </li>
             <li class="">
             <a href="#" class="thumbnail">

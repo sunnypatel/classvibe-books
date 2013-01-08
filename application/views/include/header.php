@@ -7,6 +7,8 @@
         <meta name="keywords" content="">
         <meta name="author" content="">
 
+		<link rel="icon" type="image/png" href="<?php echo base_url('assets/img/favicon.png') ?>">
+
         <title>ClassVibe | Bookstores</title>
 
         <link href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
@@ -16,5 +18,17 @@
         <!-- *** DEVELOPMENT ONLY *** -->
         <!-- ON PRODUCTION USE PRE-COMPILED VER. -->
         <script src="<?php echo base_url('assets/js/less.js'); ?>" type="text/javascript"></script>
+
+
+<script>
+    $("#nail").hover(function(){
+       // $(this).find(".snipit").slideDown("slow");
+        alert('test');
+    },function(){
+        //$(this).find(".snipit").slideUp("slow");
+    });
+
+</script>
+
 </head>
 <body>

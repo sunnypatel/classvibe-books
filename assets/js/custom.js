@@ -84,4 +84,11 @@ frontpage.public_function();
  */
 $(document).ready(function() {
 	frontpage.init();
+
+	$(".slide").hover(function(){
+		$(this).find(".snipit").slideDown("slow");
+		alert('test');
+	},function(){
+		$(this).find(".snipit").slideUp("slow");
+	});
 });
