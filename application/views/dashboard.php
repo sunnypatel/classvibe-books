@@ -26,7 +26,6 @@
 			  <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
 			</div>
 
-
 			<div class="control-group">
 				<div class="controls">
 					<input type="text" class="span12" placeholder='Book title' tabindex="1" name="title" id="title">
@@ -71,34 +70,38 @@
 			</a>
 			</li>
 			
-            <li class="">
-			<div class="thumbnail" id="nail">
-                <img data-src="http://placehold.it/160x120" src="http://placehold.it/160x120">
-				<div class="snipit">
-					<h3>Label</h3>
-					<p>caption</p>
-				</div>
-			</div>
-            </li>
-            <li class="">
-            <a href="#" class="thumbnail">
-                <img data-src="http://placehold.it/160x120" style="width:160px; 
-height:120px;" src="http://placehold.it/160x120">
-            </a>
-            </li>
-            <li class="">
-            <a href="#" class="thumbnail">
-                <img data-src="http://placehold.it/160x120" style="width:160px; 
-height:120px;" src="http://placehold.it/160x120">
-            </a>
-            </li>
-            <li class="">
-            <a href="#" class="thumbnail">
-                <img data-src="http://placehold.it/160x120" style="width:160px; 
-height:120px;" src="http://placehold.it/160x120">
-            </a>
-            </li>
 
+<?php
+	foreach($books as $book){
+		?>
+		<li class="">
+		<a href="<?php base_url('index.php/dashboard/user_id/book_id'); ?>" class="thumbnail">
+			<img data-src="<?php echo $book['bookcover_url'];?>" style="width:160px; height:120px;" src="<?php echo $book['bookcover_url'];?>">
+		</a>
+		</li> 
+		<?php
+	}
+?>
+
+		<!--	<li class="">
+            <a href="#" class="thumbnail">
+                <img data-src="http://placehold.it/160x120" style="width:160px; 
+height:120px;" src="http://placehold.it/160x120">
+            </a>
+            </li>
+            <li class="">
+            <a href="#" class="thumbnail">
+                <img data-src="http://placehold.it/160x120" style="width:160px; 
+height:120px;" src="http://placehold.it/160x120">
+            </a>
+            </li>
+            <li class="">
+            <a href="#" class="thumbnail">
+                <img data-src="http://placehold.it/160x120" style="width:160px; 
+height:120px;" src="http://placehold.it/160x120">
+            </a>
+            </li>
+-->
 		</ul>
 		</div>
 

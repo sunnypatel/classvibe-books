@@ -12,10 +12,31 @@ class Dashboard extends Main_Controller {
 			// user is signed in and IS A admin
 			redirect('administrator/','refresh');
 		}
-		
+		$user = $this->ion_auth->user()->row();
+		// get all books by user
+		$query = $this->db->get_where('books',array('user_id'=>$user->id));		
 
+		$books = array();
+		if($query->num_rows()>0) {
+			foreach($query->result_array() as $row)
+			{
+				// load the bookcover if available or load the default bookcover image
+//				echo 'http:/localhost/classvibe-books/assets/user_data/bookcovers/'. $row['user_id'].'_'.$row['id'].'_'.$row['bookcover_id'].'_160x120.jpg';
+				$file = 'assets/user_data/bookcovers/'. $row['user_id'].'_'.$row['id'].'_'.$row['bookcover_id'].'_160x120.jpg';
+			
+				// check if bookcover file exists
+				if($loc = file_exists($file)) 
+					$row['bookcover_url'] = base_url($file);
+				else // no bookcover for this book was uploaded, load default img
+					$row['bookcover_url'] = base_url('assets/user_data/bookcovers/default_160x120.jpg');
+
+				array_push($books,$row);
+			}
+		}
+		
+		$data['books'] = $books;	
 		$this->load->view('include/header');
-		$this->load->view('dashboard');
+		$this->load->view('dashboard', $data);
 		$this->load->view('include/footer');
 		
 	}
@@ -25,7 +46,7 @@ class Dashboard extends Main_Controller {
 		//validate form input
 		$this->form_validation->set_rules('title','Title', '');
 		$this->form_validation->set_rules('author','Author','');
-		$this->form_validation->set_rules('course_num','Course Number', 'alpha_numeric');
+		$this->form_validation->set_rules('course_num','Course Number', '');
 
 		if($this->form_validation->run() == true){
 			// form validation passed, upload book for user
@@ -89,6 +110,7 @@ class Dashboard extends Main_Controller {
                 'type' => 'text',
                 'value' => $this->form_validation->set_value('isbn')
             );
+			echo "failed";
 		}
 
 	}
@@ -113,13 +135,14 @@ class Dashboard extends Main_Controller {
 			$data['full_path'] =	$this->image_lib->image_to_jpeg($config['source_image'],$config['new_image'],$data['file_ext'], 50);
 			
 		}	
-	
+
+		// create a 320x280 image copy	
 		// reset vars and prepare for more image processing
 		$config = array();
 		$this->image_lib->clear();
 
         // resize if needed
-        if($data['image_width'] > 320 || $data['image_height'] > 280) {
+//        if($data['image_width'] > 320 || $data['image_height'] > 280) {
             // bookcover prefs
             $config['source_image'] = $data['full_path'];
 			$config['new_image'] =$data['file_path'] . $data['raw_name'] . '_320x280.jpg';
@@ -131,10 +154,27 @@ class Dashboard extends Main_Controller {
             $this->image_lib->initialize($config);
             // process
             $this->image_lib->resize();
-            //  $this->image_lib->display_errors();
-        }
+        //  $this->image_lib->display_errors();
+//        }
 
+		// create a 160x120 image copy
+        // reset vars and prepare for more image processing
+        $config = array();
+        $this->image_lib->clear();
 
+        // resize if needed
+        // bookcover prefs
+        $config['source_image'] = $data['full_path'];
+        $config['new_image'] =$data['file_path'] . $data['raw_name'] . '_160x120.jpg';
+        $config['maintain_ratio'] = TRUE;
+        $config['width'] = 160;
+        $config['height'] = 120;
+        $config['create_thumb'] = FALSE;
+        // re-initialize image library config
+        $this->image_lib->initialize($config);
+        // process
+		$this->image_lib->resize();
+//        $this->image_lib->display_errors();
         // reset vars and prepare for another image process
         $config = array();
         $this->image_lib->clear();

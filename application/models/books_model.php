@@ -52,4 +52,11 @@ class Books_model extends CI_Model {
 		// return the id of newly created bookcover
 		return $this->db->insert_id();
 	}
+
+	// get all books uploaded by user
+	function getBooks_byUser($user_id){
+		
+		return $this->db->get_where('books',array('user_id'=>$user_id));
+
+	}
 }
