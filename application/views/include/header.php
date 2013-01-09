@@ -16,5 +16,9 @@
 	<!-- *** DEVELOPMENT ONLY *** -->
 	<!-- ON PRODUCTION USE PRE-COMPILED VER. -->
 	<script src="<?php echo base_url('assets/js/less.js'); ?>" type="text/javascript"></script>
+       <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-1.8.3.min.js')?>"></script>
+
+  <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+     
 </head>
 <body>
