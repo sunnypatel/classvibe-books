@@ -1,7 +1,12 @@
+ <script>
+        $(document).ready(function(){
+            $("#login").validate();
+        });    
+</script>
 <div class="container-fluid">
 	<div class="row-fluid top">
 		<div class="span4 classvibe_title">
-			<h2 class="small">AssVibe<small>BookStores</small></h2>
+			<h2 class="small">ClassVibe<small>BookStores</small></h2>
 		</div>
 		<div class="span8 right" >
 			<form class="search_all_top" action="google.com" method="post">
@@ -33,17 +38,17 @@
 		<!-- login box -->
 		<div class="span4 login_box">
 			
-			<form class="homepage" action="<?php echo base_url('index.php/auth/login');?>" method="post">
+			<form id="slogin" class="homepage" action="<?php echo base_url('index.php/auth/login');?>" method="post">
 				<h1>login</h1>	<br>
 				<div class="control-group">
 					<div class="controls">
-						<input type="text" class="span12" placeholder="Email" name="identity" tabindex="1">
+						<input type="text" class="span12 required email" minlength="5" placeholder="Email" name="identity" tabindex="1">
 					</div>
 				</div>
 
 				<div class="control-group">
 					<div class="controls">
-						<input type="password" class="span12" placeholder="Password" name="password" tabindex="2">
+						<input type="password" class="span12 required" minlength="5" placeholder="Password" name="password" tabindex="2">
 					</div>
 				</div>
 <br>
@@ -62,16 +67,16 @@
 	
 			<div class="row-fluid green">
 				<div class="span5" style="padding:15px">
-                    <form class="signup_form" method="post" action="#">
+                    <form id="signup" class="signup_form" method="post" action="#">
                         <div class="control-group">
                             <div class="controls">
-                                <input type="text" class="span12" placeholder="Email" name="email">
+                                <input type="text" class="span12 required email" minlength="5" placeholder="Email" name="email" >
                             </div>
                         </div>
 
                         <div class="control-group">
                             <div class="controls">
-                                <input type="password" class="span12" placeholder="Password" name="password">
+                                <input type="password" class="span12 required" minlength="5" placeholder="Password" name="password">
                             </div>
                         </div>  
                         
