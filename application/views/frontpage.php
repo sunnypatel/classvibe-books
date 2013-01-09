@@ -1,8 +1,6 @@
  <script>
         $(document).ready(function(){
             $("#login").validate();
-        }); 
-         $(document).ready(function(){
             $("#signup").validate();
         });
 </script>
