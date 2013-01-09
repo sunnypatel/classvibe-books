@@ -1,7 +1,10 @@
  <script>
         $(document).ready(function(){
-            $("#slogin").validate();
-        });    
+            $("#login").validate();
+        }); 
+         $(document).ready(function(){
+            $("#signup").validate();
+        });
 </script>
 <div class="container-fluid">
 	<div class="row-fluid top">
@@ -38,7 +41,7 @@
 		<!-- login box -->
 		<div class="span4 login_box">
 			
-			<form id="slogin" class="homepage" action="<?php echo base_url('index.php/auth/login');?>" method="post">
+			<form id="login" class="homepage" action="<?php echo base_url('index.php/auth/login');?>" method="post">
 				<h1>login</h1>	<br>
 				<div class="control-group">
 					<div class="controls">
