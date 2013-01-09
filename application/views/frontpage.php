@@ -1,6 +1,6 @@
  <script>
         $(document).ready(function(){
-            $("#login").validate();
+            $("#slogin").validate();
         });    
 </script>
 <div class="container-fluid">
