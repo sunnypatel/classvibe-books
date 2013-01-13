@@ -104,6 +104,20 @@ h1,h2,h3,h4,h5,h6{
 	background:#57A7B5;
 	padding:15px;
 
+	// Change color placeholder
+	@placeholder_color: #eaeaea;
+	input:-moz-placeholder{
+		color:@placeholder_color;
+	}
+	input::-moz-placeholder{
+		color: @placeholder_color;
+	}
+	input::-webkit-input-placeholder{
+		color: @placeholder_color;
+	}
+	input:-ms-input-placeholder{
+		color:@placeholder_color;
+	}
 	h1{
 		color:#fff;
 		font-weight:lighter;
@@ -115,11 +129,24 @@ h1,h2,h3,h4,h5,h6{
 	input{
 		height:40px;
 		font-size:14px;	
-		//background:#1c6876;
-		
+		background:#4A8F9C;
+		border:none;	
+		color:#Fff;
 	}
-	button{ height:30px;}
+	button, .blue_btn{
+		height:30px;
+		background:#4A8F9C;
+		color:#FFF;
+		border:0px;
+		vertical-align:middle;
+		text-shadow:none;
+	}
+	.blue_btn:hover{
+		background:#F4F4F4;
+		color:#4A8F9C;
+	}
 }
+fileupload-exists{background:black;}
 .analytics_box{
 	background:#ffaa00;
 	padding:10px;

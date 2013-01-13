@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class="row-fluid top">
 			<div class="span4 classvibe_title">
-				<h2 class="small">ClassVibe<small>BookStores</small></h2>
+				<h1 class="small">ClassVibe<small>BookStores</small></h1>
 			</div>
 
 			<div class="span8 right">
@@ -22,7 +22,7 @@
 			<div class="fileupload fileupload-new" data-provides="fileupload">
 			  <div class="fileupload-new thumbnail" style="width: 150px; height: 150px;"><img src="http://www.placehold.it/150x150/EFEFEF/AAAAAA" /></div>
 			  <div class="fileupload-preview fileupload-exists thumbnail" style="width: 150px; height: 150px;"></div>
-			  <span class="btn btn-file"><span class="fileupload-new">Select bookcover </span><span class="fileupload-exists">Change</span><input type="file" name="bookcover" /></span>
+			  <span class="btn btn-file" style="margin-top:20px"><span class="fileupload-new">Select bookcover </span><span class="fileupload-exists">Change</span><input type="file" name="bookcover" /></span>
 			  <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
 			</div>
 
@@ -52,7 +52,7 @@
 
 			<div class="control-group">
 				<div class="controls">
-					<button type="submit" class="span4 btn put-right">Upload</button>
+					<button type="submit" class="span4 btn .blue_btn pull-right">Upload</button>
 				</div>
 			</div>
 			</form>
