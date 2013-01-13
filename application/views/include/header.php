@@ -19,16 +19,5 @@
         <!-- ON PRODUCTION USE PRE-COMPILED VER. -->
         <script src="<?php echo base_url('assets/js/less.js'); ?>" type="text/javascript"></script>
 
-
-<script>
-    $("#nail").hover(function(){
-       // $(this).find(".snipit").slideDown("slow");
-        alert('test');
-    },function(){
-        //$(this).find(".snipit").slideUp("slow");
-    });
-
-</script>
-
 </head>
 <body>

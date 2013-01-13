@@ -66,7 +66,7 @@
 			<li class="">
 			<a href="#" class="thumbnail">
 				
-				<img data-src="http://placehold.it/320x270" style="width:320px; height:270px;" src="http://placehold.it/320x270">
+				<img data-src="http://placehold.it/340x270" style="width:340px; height:270px;" src="http://placehold.it/340x270">
 			</a>
 			</li>
 			
@@ -74,9 +74,9 @@
 <?php
 	foreach($books as $book){
 		?>
-		<li class="">
+		<li class="" style="">
 		<a href="<?php base_url('index.php/dashboard/user_id/book_id'); ?>" class="thumbnail">
-			<img data-src="<?php echo $book['bookcover_url'];?>" style="width:160px; height:120px;" src="<?php echo $book['bookcover_url'];?>">
+			<img data-src="<?php echo $book['bookcover_url'];?>" style="width:150px; height:120px;" src="<?php echo $book['bookcover_url'];?>">
 		</a>
 		</li> 
 		<?php
